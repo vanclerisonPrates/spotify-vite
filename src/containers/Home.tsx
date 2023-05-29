@@ -8,7 +8,7 @@ import { useFetchProfile } from "../hooks/useFetchProfile";
 
 function Home() {
   const [search, setSearchKey] = useState("");
-
+  console.log(search);
   const { token } = useAuthentication();
   const { artists } = useFetchArtists({ token: token, searchKey: search });
   const { profile } = useFetchProfile(token);

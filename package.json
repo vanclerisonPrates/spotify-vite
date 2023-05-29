@@ -7,7 +7,8 @@
     "dev": "vite --mode .env",
     "build": "tsc && vite build --mode staging",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy:s3": "aws s3 sync ./dist s3://spotifyreactapi.com.br --acl public-read"
   },
   "dependencies": {
     "axios": "^1.4.0",
